@@ -1,0 +1,25 @@
+# Obsidian workspace and plugin cache
+.obsidian/workspace
+.obsidian/workspace.json
+.obsidian/plugins/*/data.json
+.obsidian/plugins/*/cache.json
+.obsidian/snippets/
+
+# macOS
+.DS_Store
+
+# Linux/Windows cruft
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# VS Code / JetBrains / Editor settings
+.vscode/
+.idea/
+*.swp
+
+# Backup files
+*.bak
+*.tmp
+*~
+
