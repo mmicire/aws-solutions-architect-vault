@@ -75,6 +75,9 @@ One-paragraph summary of the AWS service or concept.
 ## 💭 Possible Implementation Notes
 - Hypotheses or speculation about how AWS likely built this
 
+## 📚 Resources
+- [Official AWS Docs](https://docs.aws.amazon.com/)
+
 ## 🔁 Linked Notes
 - [[IAM]], [[S3]], etc.
 ```
