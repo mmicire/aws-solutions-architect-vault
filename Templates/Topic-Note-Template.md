@@ -29,5 +29,12 @@ Brief overview of the service or concept.
 ## 💭 Possible Implementation Notes
 - Notes about how AWS might implement this behind the scenes (e.g., global DNS strategies, S3 internals, load balancer behavior)
 
+## 📚 Resources
+- [Official AWS Docs](https://docs.aws.amazon.com/)
+- [Pricing Page](https://aws.amazon.com/pricing/)
+- [FAQ](https://aws.amazon.com/faqs/)
+- [Whitepapers / re:Invent talks]
+
 ## 🔁 Linked Notes
 - [[Related Service]], [[Comparison Note]]
+EOF

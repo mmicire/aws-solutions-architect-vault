@@ -1,25 +1,28 @@
 # get-aws-links.sh
 
-A simple Bash utility to fetch official **AWS documentation, pricing, and FAQ links** for common AWS services.
+A lightweight, POSIX-compatible CLI tool to quickly fetch **official AWS documentation, pricing, and FAQ links** for common AWS services.
 
-This tool helps you quickly reference authoritative AWS resources while studying or documenting services — especially useful in an Obsidian vault or CLI workflow.
+Perfect for use while studying for AWS certifications or documenting in tools like Obsidian.  
+Supports Markdown export and clipboard integration on macOS.
 
 ---
 
 ## 🚀 Usage
 
 ```bash
-./get-aws-links.sh <SERVICE_NAME> [--md]
+./get-aws-links.sh <SERVICE_NAME> [--md] [--copy]
 ```
 
-- `<SERVICE_NAME>`: Name of the AWS service (e.g., `s3`, `ec2`, `lambda`, etc.)
-- `--md` *(optional)*: Outputs results in Markdown format for copy-pasting into your notes
+### Arguments:
+- `<SERVICE_NAME>`: The name of the AWS service (e.g., `s3`, `ec2`, `lambda`)
+- `--md`: Output the links in Markdown format
+- `--copy`: Copy the Markdown output directly to your clipboard (macOS only)
 
 ---
 
 ## 📘 Examples
 
-### Basic output (default terminal format):
+### Output to terminal (default):
 ```bash
 ./get-aws-links.sh s3
 ```
@@ -32,7 +35,9 @@ Pricing: https://aws.amazon.com/s3/pricing/
 FAQ:     https://aws.amazon.com/s3/faqs/
 ```
 
-### Markdown format for Obsidian or note-taking:
+---
+
+### Output as Markdown:
 ```bash
 ./get-aws-links.sh ec2 --md
 ```
@@ -47,32 +52,46 @@ FAQ:     https://aws.amazon.com/s3/faqs/
 
 ---
 
-## 🛠️ Supported Services
+### Copy Markdown directly to clipboard:
+```bash
+./get-aws-links.sh lambda --copy
+```
 
-Currently includes mappings for:
-- S3
-- EC2
-- IAM
-- Lambda
-- CloudFront
-- DynamoDB
-- RDS
-- CloudFormation
-- CloudWatch
-- VPC
-
-You can easily extend the script by adding new services to the `DOCS`, `PRICING`, and `FAQ` maps.
+**Output:**
+```
+✅ Markdown copied to clipboard!
+```
 
 ---
 
-## 🔐 Requirements
+## ✅ Supported Services
 
-- Bash shell (Linux/macOS/WSL)
-- No internet scraping or AWS CLI required — it uses hardcoded official URLs for reliability
+This script supports the following AWS services:
+
+- `s3`
+- `ec2`
+- `iam`
+- `lambda`
+- `cloudfront`
+- `dynamodb`
+- `rds`
+- `cloudformation`
+- `cloudwatch`
+- `vpc`
+
+More services can easily be added by extending the `case` block in the script.
 
 ---
 
-## 🧑‍💻 Author
+## 🧩 Compatibility
 
-Created by [mmicire](https://github.com/mmicire) as a companion tool for AWS Solutions Architect study and note-taking.
+- ✔️ macOS (native Bash 3.2 or sh)
+- ✔️ Linux (any POSIX shell)
+- ✔️ No dependencies except `pbcopy` (macOS clipboard tool)
+
+---
+
+## ✍️ Author
+
+Created by [mmicire](https://github.com/mmicire) as a note-taking companion for AWS Solutions Architect studies and Obsidian vaults.
 
