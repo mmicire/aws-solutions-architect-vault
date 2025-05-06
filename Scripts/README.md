@@ -1,0 +1,78 @@
+# get-aws-links.sh
+
+A simple Bash utility to fetch official **AWS documentation, pricing, and FAQ links** for common AWS services.
+
+This tool helps you quickly reference authoritative AWS resources while studying or documenting services — especially useful in an Obsidian vault or CLI workflow.
+
+---
+
+## 🚀 Usage
+
+```bash
+./get-aws-links.sh <SERVICE_NAME> [--md]
+```
+
+- `<SERVICE_NAME>`: Name of the AWS service (e.g., `s3`, `ec2`, `lambda`, etc.)
+- `--md` *(optional)*: Outputs results in Markdown format for copy-pasting into your notes
+
+---
+
+## 📘 Examples
+
+### Basic output (default terminal format):
+```bash
+./get-aws-links.sh s3
+```
+
+**Output:**
+```
+📚 AWS Resources for S3
+Docs:    https://docs.aws.amazon.com/s3/
+Pricing: https://aws.amazon.com/s3/pricing/
+FAQ:     https://aws.amazon.com/s3/faqs/
+```
+
+### Markdown format for Obsidian or note-taking:
+```bash
+./get-aws-links.sh ec2 --md
+```
+
+**Output:**
+```markdown
+## 📚 Resources
+- [Official AWS Docs](https://docs.aws.amazon.com/ec2/)
+- [Pricing Page](https://aws.amazon.com/ec2/pricing/)
+- [FAQ](https://aws.amazon.com/ec2/faqs/)
+```
+
+---
+
+## 🛠️ Supported Services
+
+Currently includes mappings for:
+- S3
+- EC2
+- IAM
+- Lambda
+- CloudFront
+- DynamoDB
+- RDS
+- CloudFormation
+- CloudWatch
+- VPC
+
+You can easily extend the script by adding new services to the `DOCS`, `PRICING`, and `FAQ` maps.
+
+---
+
+## 🔐 Requirements
+
+- Bash shell (Linux/macOS/WSL)
+- No internet scraping or AWS CLI required — it uses hardcoded official URLs for reliability
+
+---
+
+## 🧑‍💻 Author
+
+Created by [mmicire](https://github.com/mmicire) as a companion tool for AWS Solutions Architect study and note-taking.
+
